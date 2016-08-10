@@ -95,7 +95,7 @@ windows linux osx
   - 方法的接收者统一命名 this，接收者类型统一采用指针，特殊情况除外；
   - 如果接收者是 map, slice 或者 chan，则不要用指针传递；
 
-#Gorotine
+#Goroutine
 > golang容许你创建成千上万的goroutine，和原生系统级线程不同，goroutine的调度并不是由系统内核来完成，而是golang自己的sched调度系统来完成。golang的sched调度系统采用比较著名的work-steel算法，大家都知道该算法里最核心的一个数据结构就是一个任务队列，如何保证高并发下该队列的正确性是该算法的重点，比较熟悉java的同学应该知道，大师doug lea威廉叔叔的fork-join并发框架采用一个64位 volatile long字段来保证队列的高并发不加锁的实现
 
 * http://morsmachine.dk/go-scheduler
